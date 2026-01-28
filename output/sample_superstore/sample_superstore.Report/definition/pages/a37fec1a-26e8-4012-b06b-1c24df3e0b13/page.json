@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "a37fec1a-26e8-4012-b06b-1c24df3e0b13",
+  "displayName": "Q8",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720,
+  "config": {
+    "layouts": []
+  }
+}

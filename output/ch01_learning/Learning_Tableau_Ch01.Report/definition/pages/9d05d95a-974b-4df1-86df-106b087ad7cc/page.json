@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "9d05d95a-974b-4df1-86df-106b087ad7cc",
+  "displayName": "Bar Chart (two levels)",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720,
+  "config": {
+    "layouts": []
+  }
+}

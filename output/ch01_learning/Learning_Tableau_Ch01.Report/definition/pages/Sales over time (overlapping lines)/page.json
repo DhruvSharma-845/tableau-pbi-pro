@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
-  "name": "d1dc3f28-cb0d-4ad4-83d6-3dfd7d1d1371",
-  "displayName": "Sales over time (overlapping lines)",
-  "displayOption": "FitToPage",
-  "width": 1280,
-  "height": 720
-}

@@ -1,157 +1,157 @@
 table 'Orders (Sample-Superstore-Subset-Excel_0)'
-	lineageTag: ddfe55f0-6be1-4035-835d-0634f6b85420
+	lineageTag: 88b2392b-9dad-4f31-b6e3-50d71d44a1d5
 
 	column 'Row ID'
 		dataType: int64
-		lineageTag: e2ce4111-34ec-44b7-8e90-0410e0de96d8
+		lineageTag: 258c724e-e6b9-4dd1-9ecb-7df31d4fc558
 		summarizeBy: none
 		sourceLineageTag: Row ID
 
 	column 'Order Priority'
 		dataType: string
-		lineageTag: 0884a319-7ca3-49ec-bb94-e7a28510326d
+		lineageTag: f0cd73ca-36dc-413b-a1b8-2f263f1026e3
 		summarizeBy: none
 		sourceLineageTag: Order Priority
 
 	column 'Discount'
 		dataType: double
-		lineageTag: 738698d2-5cc7-4e15-b35a-80a684246c03
+		lineageTag: f165ecd3-6caf-4498-bb8f-bb9ab1ca9eb6
 		summarizeBy: none
 		sourceLineageTag: Discount
 
 	column 'Unit Price'
 		dataType: double
-		lineageTag: 337ce481-558b-4516-897f-cb59201032c2
+		lineageTag: ec1b5abd-8d62-4b88-8d0a-68d464763302
 		summarizeBy: none
 		sourceLineageTag: Unit Price
 
 	column 'Shipping Cost'
 		dataType: double
-		lineageTag: c4e5ac9a-964d-40f6-aa71-6ff02b9bdaf0
+		lineageTag: 77f2a011-74a1-46fd-897a-79bdd1c191d1
 		summarizeBy: none
 		sourceLineageTag: Shipping Cost
 
 	column 'Customer ID'
 		dataType: int64
-		lineageTag: bcb9df3d-f3e3-4e35-b491-6912304140bd
+		lineageTag: b0ac2ba1-ba4a-4add-acb3-8438f01ff4fb
 		summarizeBy: none
 		sourceLineageTag: Customer ID
 
 	column 'Customer Name'
 		dataType: string
-		lineageTag: aa727042-24c3-44d0-922e-0d1869f291a9
+		lineageTag: 72f5e8f1-a691-4927-b7ca-32886c88ffae
 		summarizeBy: none
 		sourceLineageTag: Customer Name
 
 	column 'Ship Mode'
 		dataType: string
-		lineageTag: 65454d82-1d12-4be1-85a6-97083598ef10
+		lineageTag: 4ebc1246-77d5-46e5-b2a8-0d5ad4a31ec0
 		summarizeBy: none
 		sourceLineageTag: Ship Mode
 
 	column 'Customer Segment'
 		dataType: string
-		lineageTag: d9b0a29f-bfef-41c4-b21b-dece90647252
+		lineageTag: ed5823e9-3541-480e-905f-783ca1106c80
 		summarizeBy: none
 		sourceLineageTag: Customer Segment
 
 	column 'Product Category'
 		dataType: string
-		lineageTag: 0824683b-fba2-4204-8821-bd23c5e998c0
+		lineageTag: ca62a402-c4f0-443e-846d-887001e3c256
 		summarizeBy: none
 		sourceLineageTag: Product Category
 
 	column 'Product Sub-Category'
 		dataType: string
-		lineageTag: 8cf96ad4-7503-496a-b121-dbda9caa6978
+		lineageTag: d6a9b13a-ac46-4c72-9806-fedc6d45f4a6
 		summarizeBy: none
 		sourceLineageTag: Product Sub-Category
 
 	column 'Product Container'
 		dataType: string
-		lineageTag: 34ae48e9-6a4c-4883-9c88-800fc90813e1
+		lineageTag: b79f5c64-17e5-4b1a-9d70-f36f2e866c69
 		summarizeBy: none
 		sourceLineageTag: Product Container
 
 	column 'Product Name'
 		dataType: string
-		lineageTag: 863a9920-9c16-44eb-8299-eaf9a8840a67
+		lineageTag: 387f7e1c-8121-42e2-882e-223857e5f1f5
 		summarizeBy: none
 		sourceLineageTag: Product Name
 
 	column 'Product Base Margin'
 		dataType: double
-		lineageTag: f5325c74-fd22-4120-82e7-69b9f8fab139
+		lineageTag: 4a6373c8-d948-4713-b1da-db1cc7c4c8ed
 		summarizeBy: none
 		sourceLineageTag: Product Base Margin
 
 	column 'Region'
 		dataType: string
-		lineageTag: 649bbf60-dbf6-419a-9bc3-48866a729c03
+		lineageTag: 4c7d814c-d62c-4604-a7bb-d0e3db10c74c
 		summarizeBy: none
 		sourceLineageTag: Region
 
 	column 'State or Province'
 		dataType: string
-		lineageTag: 6fcb398e-2796-4eaa-aa09-7e642b7c860f
+		lineageTag: d7d3fc18-ff8d-4276-b323-007e764ea6bc
 		summarizeBy: none
 		sourceLineageTag: State or Province
 
 	column 'City'
 		dataType: string
-		lineageTag: 46df091a-64a2-47b6-8402-015ed8d20d08
+		lineageTag: 0ed50318-ad00-4229-a1d6-e7bac9bfbbf5
 		summarizeBy: none
 		sourceLineageTag: City
 
 	column 'Postal Code'
 		dataType: int64
-		lineageTag: 7ae0b7d7-2637-40f3-884c-90fcfd35679d
+		lineageTag: 6591581e-1414-4760-a8ff-ea83cb686d37
 		summarizeBy: none
 		sourceLineageTag: Postal Code
 
 	column 'Order Date'
 		dataType: dateTime
-		lineageTag: fa780f6f-4057-4bc2-8c2f-5c75933a7786
+		lineageTag: 4f6e49ce-d9d8-48d9-afa6-6d254d3b5b4c
 		summarizeBy: none
 		sourceLineageTag: Order Date
 
 	column 'Ship Date'
 		dataType: dateTime
-		lineageTag: 0861ba79-92fa-43d1-8c99-66fa71669936
+		lineageTag: 7f762928-bb4f-4715-a4fc-8899c0666e9c
 		summarizeBy: none
 		sourceLineageTag: Ship Date
 
 	column 'Profit'
 		dataType: double
-		lineageTag: be68bb2a-89aa-4215-af16-5defc7381613
+		lineageTag: 2d086b65-bd48-4bae-b2c6-2d7850cd186d
 		summarizeBy: none
 		sourceLineageTag: Profit
 
 	column 'Quantity ordered new'
 		dataType: int64
-		lineageTag: aa91d267-d590-4f1f-8c16-667dd2bbe402
+		lineageTag: 6b22bd68-17b2-4b28-963b-455e4317a7d6
 		summarizeBy: none
 		sourceLineageTag: Quantity ordered new
 
 	column 'Sales'
 		dataType: double
-		lineageTag: c1c74222-aa97-4243-a311-623625b1da67
+		lineageTag: 8ab06183-887d-42d6-ab69-8d70064a799e
 		summarizeBy: none
 		sourceLineageTag: Sales
 
 	column 'Order ID'
 		dataType: int64
-		lineageTag: 3364a239-f674-4475-bfd0-6089ebee7003
+		lineageTag: 81915082-7133-481f-9b2b-0493c338e041
 		summarizeBy: none
 		sourceLineageTag: Order ID
 
 	measure 'Calculation_415175602765828097' = [Profit]/[Sales]
-		lineageTag: b5c9ef63-5875-4a85-8275-6aa62126774f
+		lineageTag: 22a0a749-e62b-4732-9fdd-822a3642e72f
 
 	measure 'Number of Records' = 1
-		lineageTag: 5d1eec68-2425-42f6-9103-b3c9e4402cec
+		lineageTag: d1b9b3d4-ec0d-4fbf-a8f7-15a6fe3415c5
 
-	partition Orders (Sample-Superstore-Subset-Excel_0)-partition = m
+	partition 'Orders (Sample-Superstore-Subset-Excel_0)-partition' = m
 		mode: import
 		source =
 			```

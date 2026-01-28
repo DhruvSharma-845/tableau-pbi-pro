@@ -7,13 +7,14 @@ class PBIPBuilder:
     def __init__(self, workbook_data, output_dir):
         self.workbook = workbook_data
         self.output_dir = output_dir
-        self.project_name = self.workbook.name.replace('.twbx', '').replace('.twb', '')
-        self.project_path = os.path.join(output_dir, f"{self.project_name}.pbip")
-        self.report_dir = os.path.join(output_dir, f"{self.project_name}.Report")
-        self.model_dir = os.path.join(output_dir, f"{self.project_name}.SemanticModel")
+        self.project_name = self._sanitize(self.workbook.name.replace('.twbx', '').replace('.twb', ''))
+        # The project folder itself should be the output_dir
+        self.project_dir = output_dir 
+        self.report_dir = os.path.join(self.project_dir, f"{self.project_name}.Report")
+        self.model_dir = os.path.join(self.project_dir, f"{self.project_name}.SemanticModel")
 
     def build(self):
-        os.makedirs(self.output_dir, exist_ok=True)
+        os.makedirs(self.project_dir, exist_ok=True)
         os.makedirs(self.report_dir, exist_ok=True)
         os.makedirs(self.model_dir, exist_ok=True)
         
@@ -41,11 +42,12 @@ class PBIPBuilder:
                 "enableAutoRecovery": True
             }
         }
-        with open(self.project_path, 'w') as f:
+        pbip_path = os.path.join(self.project_dir, f"{self.project_name}.pbip")
+        with open(pbip_path, 'w') as f:
             json.dump(pbip_content, f, indent=2)
 
     def _create_pbi_folder(self):
-        pbi_path = os.path.join(self.output_dir, ".pbi")
+        pbi_path = os.path.join(self.project_dir, ".pbi")
         os.makedirs(pbi_path, exist_ok=True)
         settings = {
             "version": "1.0",
@@ -135,9 +137,9 @@ class PBIPBuilder:
                         ""
                     ])
             
-            # Partition (Required for Power BI to load data)
+            # Partition
             tmdl.extend([
-                f"	partition {ds_name}-partition = m",
+                f"	partition '{ds_name}-partition' = m",
                 "		mode: import",
                 f"		source =",
                 "			```",
@@ -150,7 +152,8 @@ class PBIPBuilder:
                 f.write("\n".join(tmdl))
 
     def _sanitize(self, name):
-        return name.strip("[]").replace("/", "_").replace("\\", "_")
+        # Remove characters that are problematic for file systems and Power BI
+        return name.strip("[]").replace("/", "_").replace("\\", "_").replace(":", "_").replace("?", "_")
 
     def _map_datatype(self, tableau_type):
         mapping = {
@@ -179,6 +182,39 @@ class PBIPBuilder:
         def_path = os.path.join(self.report_dir, "definition")
         os.makedirs(def_path, exist_ok=True)
         
+        # Prepare pages
+        pages_metadata = []
+        pages_path = os.path.join(def_path, "pages")
+        os.makedirs(pages_path, exist_ok=True)
+        
+        for ws in self.workbook.worksheets:
+            page_id = str(uuid.uuid4())
+            page_name = self._sanitize(ws.name)
+            
+            pages_metadata.append({
+                "name": page_id,
+                "displayName": ws.name
+            })
+            
+            page_dir = os.path.join(pages_path, page_id)
+            os.makedirs(page_dir, exist_ok=True)
+            
+            page_json = {
+                "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+                "name": page_id,
+                "displayName": ws.name,
+                "displayOption": "FitToPage",
+                "width": 1280,
+                "height": 720,
+                "config": {
+                    "layouts": []
+                }
+            }
+            with open(os.path.join(page_dir, "page.json"), 'w') as f:
+                json.dump(page_json, f, indent=2)
+            
+            os.makedirs(os.path.join(page_dir, "visuals"), exist_ok=True)
+
         # report.json
         report_json = {
             "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
@@ -192,6 +228,7 @@ class PBIPBuilder:
                 }
             },
             "layoutOptimization": "horizontal",
+            "pages": pages_metadata,
             "config": {
                 "version": "5.59",
                 "settings": {
@@ -203,26 +240,3 @@ class PBIPBuilder:
         }
         with open(os.path.join(def_path, "report.json"), 'w') as f:
             json.dump(report_json, f, indent=2)
-            
-        # pages
-        pages_path = os.path.join(def_path, "pages")
-        os.makedirs(pages_path, exist_ok=True)
-        
-        for ws in self.workbook.worksheets:
-            page_name = self._sanitize(ws.name)
-            page_dir = os.path.join(pages_path, page_name)
-            os.makedirs(page_dir, exist_ok=True)
-            
-            page_json = {
-                "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
-                "name": str(uuid.uuid4()),
-                "displayName": ws.name,
-                "displayOption": "FitToPage",
-                "width": 1280,
-                "height": 720
-            }
-            with open(os.path.join(page_dir, "page.json"), 'w') as f:
-                json.dump(page_json, f, indent=2)
-            
-            # visuals folder (even if empty, it's good practice)
-            os.makedirs(os.path.join(page_dir, "visuals"), exist_ok=True)

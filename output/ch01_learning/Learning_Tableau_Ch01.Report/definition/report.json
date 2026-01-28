@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
-  "id": "a31cd230-cc24-4563-9cb8-b2e8fcc5a282",
+  "id": "999a6366-abc8-42e6-9ee9-e421b50ba161",
   "name": "Learning_Tableau_Ch01",
   "themeCollection": {
     "baseTheme": {
@@ -10,6 +10,52 @@
     }
   },
   "layoutOptimization": "horizontal",
+  "pages": [
+    {
+      "name": "c8522693-2f1e-4edb-b401-529f0ddef112",
+      "displayName": "Bar Chart (stacked)"
+    },
+    {
+      "name": "9d05d95a-974b-4df1-86df-106b087ad7cc",
+      "displayName": "Bar Chart (two levels)"
+    },
+    {
+      "name": "9004d7ae-a489-4e5f-b0ca-19f0ae42d240",
+      "displayName": "Density of Orders"
+    },
+    {
+      "name": "d2769575-7f6a-4663-a673-579c133af9ce",
+      "displayName": "Measures and Dimensions"
+    },
+    {
+      "name": "35d4b9c8-216a-499a-a394-2283f5ab9451",
+      "displayName": "Sales by Department"
+    },
+    {
+      "name": "cc204aef-0969-498f-89af-dd3f15857d2c",
+      "displayName": "Sales by Postal Code"
+    },
+    {
+      "name": "98e12381-3486-446b-bfb3-a24df1b5c06c",
+      "displayName": "Sales by State"
+    },
+    {
+      "name": "17fc533a-3471-4cb7-80ee-d63e5c59c14f",
+      "displayName": "Sales over time"
+    },
+    {
+      "name": "f2a07f15-b1a8-43f2-bbe7-487145076857",
+      "displayName": "Sales over time (multiple rows)"
+    },
+    {
+      "name": "276f484a-5681-4c3b-ac2d-3850be60f22a",
+      "displayName": "Sales over time (overlapping lines)"
+    },
+    {
+      "name": "ddf07389-e94f-4e41-895d-7094164e043f",
+      "displayName": "Show Me"
+    }
+  ],
   "config": {
     "version": "5.59",
     "settings": {

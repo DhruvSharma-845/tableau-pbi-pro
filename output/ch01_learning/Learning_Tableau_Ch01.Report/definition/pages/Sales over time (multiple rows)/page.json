@@ -1,8 +1,0 @@
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
-  "name": "8dc608f3-fe87-4105-8ee7-810507416066",
-  "displayName": "Sales over time (multiple rows)",
-  "displayOption": "FitToPage",
-  "width": 1280,
-  "height": 720
-}

@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
-  "id": "ff1bd973-c02f-44bd-88e4-14f20ebd48a8",
+  "id": "5fbf2444-0fbc-4637-a918-10f60413cf74",
   "name": "sample_superstore",
   "themeCollection": {
     "baseTheme": {
@@ -10,6 +10,40 @@
     }
   },
   "layoutOptimization": "horizontal",
+  "pages": [
+    {
+      "name": "3be2d8db-f96a-4a44-b47a-e7c7f360e76f",
+      "displayName": "Q1"
+    },
+    {
+      "name": "8fc4d57d-a740-4b9b-bea0-8ed530b0937a",
+      "displayName": "Q2"
+    },
+    {
+      "name": "e97d833c-143e-495e-8641-802ddab3334e",
+      "displayName": "Q3"
+    },
+    {
+      "name": "87550425-e2bd-4e2c-bfa8-860c0e29ecda",
+      "displayName": "Q4"
+    },
+    {
+      "name": "eb566e28-cefd-4244-9be0-0a4f332ea288",
+      "displayName": "Q5"
+    },
+    {
+      "name": "05b3ab5d-2bc2-4be6-b6ae-59db95cc614d",
+      "displayName": "Q6"
+    },
+    {
+      "name": "42207353-6880-40a0-ad21-d99789dd5d2e",
+      "displayName": "Q7"
+    },
+    {
+      "name": "a37fec1a-26e8-4012-b06b-1c24df3e0b13",
+      "displayName": "Q8"
+    }
+  ],
   "config": {
     "version": "5.59",
     "settings": {
