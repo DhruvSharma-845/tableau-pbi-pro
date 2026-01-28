@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "id": "a31cd230-cc24-4563-9cb8-b2e8fcc5a282",
+  "name": "Learning_Tableau_Ch01",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU02",
+      "version": "5.0.0",
+      "type": "default"
+    }
+  },
+  "layoutOptimization": "horizontal",
+  "config": {
+    "version": "5.59",
+    "settings": {
+      "isPersistentUserStateDisabled": false,
+      "hideVisualContainerHeader": false,
+      "useDefaultAggregateDisplayName": true
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/1.0.0/schema.json",
+  "id": "14ebaf06-d534-4272-b976-957e42f5fda8",
+  "name": "sample_superstore",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY24SU02",
+      "version": "5.0.0",
+      "type": "default"
+    }
+  },
+  "layoutOptimization": "horizontal",
+  "config": {
+    "version": "5.59",
+    "settings": {
+      "isPersistentUserStateDisabled": false,
+      "hideVisualContainerHeader": false,
+      "useDefaultAggregateDisplayName": true
+    }
+  }
+}

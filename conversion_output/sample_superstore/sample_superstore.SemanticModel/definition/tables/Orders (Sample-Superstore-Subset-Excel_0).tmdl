@@ -1,0 +1,159 @@
+table 'Orders (Sample-Superstore-Subset-Excel_0)'
+	lineageTag: 803d8024-6a7c-469d-99eb-699f58f363df
+
+	column 'Row ID'
+		dataType: int64
+		lineageTag: 1cfa0af1-dd58-4b66-9dd6-ad8411173d4c
+		summarizeBy: none
+		sourceLineageTag: Row ID
+
+	column 'Order Priority'
+		dataType: string
+		lineageTag: 8e0dfac0-6095-4c87-9212-a508386a447b
+		summarizeBy: none
+		sourceLineageTag: Order Priority
+
+	column 'Discount'
+		dataType: double
+		lineageTag: 1a14042b-9977-4daf-9ca9-dd3c2f6f1308
+		summarizeBy: none
+		sourceLineageTag: Discount
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: 62045a0a-7a8a-49f6-aca4-de6ce984f1a2
+		summarizeBy: none
+		sourceLineageTag: Unit Price
+
+	column 'Shipping Cost'
+		dataType: double
+		lineageTag: b09f75ce-48a7-45a3-9baf-f7ad7ff8d4d1
+		summarizeBy: none
+		sourceLineageTag: Shipping Cost
+
+	column 'Customer ID'
+		dataType: int64
+		lineageTag: 48787ab9-722a-4d31-875c-e58eeb3d5853
+		summarizeBy: none
+		sourceLineageTag: Customer ID
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: 3a4a36b7-5a87-4f04-a2d6-7d4bf87a1920
+		summarizeBy: none
+		sourceLineageTag: Customer Name
+
+	column 'Ship Mode'
+		dataType: string
+		lineageTag: 289c3257-23c2-4d63-bf85-0511d38ed40e
+		summarizeBy: none
+		sourceLineageTag: Ship Mode
+
+	column 'Customer Segment'
+		dataType: string
+		lineageTag: 94bd603c-608a-4892-8ba0-17208d2f3c2a
+		summarizeBy: none
+		sourceLineageTag: Customer Segment
+
+	column 'Product Category'
+		dataType: string
+		lineageTag: 4336cb5b-a805-4546-9634-d8a346017e8a
+		summarizeBy: none
+		sourceLineageTag: Product Category
+
+	column 'Product Sub-Category'
+		dataType: string
+		lineageTag: c8d578c3-3de3-46ea-8d95-ebe8ba5f6fd4
+		summarizeBy: none
+		sourceLineageTag: Product Sub-Category
+
+	column 'Product Container'
+		dataType: string
+		lineageTag: 0e5942e7-6f0b-4923-8bb1-45d0deb8c1fe
+		summarizeBy: none
+		sourceLineageTag: Product Container
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: c63509fb-3433-4a3f-b229-1eead87f5561
+		summarizeBy: none
+		sourceLineageTag: Product Name
+
+	column 'Product Base Margin'
+		dataType: double
+		lineageTag: 90e39284-4fc0-405a-9135-4724bcba848e
+		summarizeBy: none
+		sourceLineageTag: Product Base Margin
+
+	column 'Region'
+		dataType: string
+		lineageTag: 7d2c9091-3fe4-478a-9f6a-00b7fcd64990
+		summarizeBy: none
+		sourceLineageTag: Region
+
+	column 'State or Province'
+		dataType: string
+		lineageTag: f58ac52a-d289-4e4e-8360-0dba0bab4c8b
+		summarizeBy: none
+		sourceLineageTag: State or Province
+
+	column 'City'
+		dataType: string
+		lineageTag: e09a711d-b262-4beb-a817-ebc90f8b8a25
+		summarizeBy: none
+		sourceLineageTag: City
+
+	column 'Postal Code'
+		dataType: int64
+		lineageTag: 94d3578f-68fc-4f11-ba99-8f3e1e494c30
+		summarizeBy: none
+		sourceLineageTag: Postal Code
+
+	column 'Order Date'
+		dataType: dateTime
+		lineageTag: 30dcf6ac-5220-4427-9588-cc5ca8ea99ad
+		summarizeBy: none
+		sourceLineageTag: Order Date
+
+	column 'Ship Date'
+		dataType: dateTime
+		lineageTag: e217f25e-3a7b-43be-add6-740586b95864
+		summarizeBy: none
+		sourceLineageTag: Ship Date
+
+	column 'Profit'
+		dataType: double
+		lineageTag: 79f54f42-abca-47e3-a2d9-ac1295cfb17c
+		summarizeBy: none
+		sourceLineageTag: Profit
+
+	column 'Quantity ordered new'
+		dataType: int64
+		lineageTag: 2c9da5c7-5c42-4dd7-9bbf-e983ab9e7cff
+		summarizeBy: none
+		sourceLineageTag: Quantity ordered new
+
+	column 'Sales'
+		dataType: double
+		lineageTag: 61c3b0bc-cec9-4ecc-8fa1-ebbf8cb15c2c
+		summarizeBy: none
+		sourceLineageTag: Sales
+
+	column 'Order ID'
+		dataType: int64
+		lineageTag: b874cd8f-7064-4de3-9e1f-481780616b6f
+		summarizeBy: none
+		sourceLineageTag: Order ID
+
+	measure 'Calculation_415175602765828097' = [Profit]/[Sales]
+		lineageTag: 661ad22c-2913-45a2-8160-c3e4a1b7689a
+
+	measure 'Number of Records' = 1
+		lineageTag: 928c8a5c-4e0e-4dee-ae11-4e5ad8127d86
+
+	partition Orders (Sample-Superstore-Subset-Excel_0)-partition = m
+		mode: import
+		source =
+			```
+			Orders (Sample-Superstore-Subset-Excel_0)
+			```

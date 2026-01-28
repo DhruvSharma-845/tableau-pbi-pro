@@ -1,0 +1,165 @@
+table 'Superstore'
+	lineageTag: b27b2f59-9cc3-4104-b29f-7fe49e90e2cc
+
+	column 'Category'
+		dataType: string
+		lineageTag: 2b0bf5b5-6383-408d-a121-60a243ced989
+		summarizeBy: none
+		sourceLineageTag: Category
+
+	column 'City'
+		dataType: string
+		lineageTag: e97d13b4-b0dc-4923-97d8-89daa114b245
+		summarizeBy: none
+		sourceLineageTag: City
+
+	column 'Container'
+		dataType: string
+		lineageTag: 0c223254-7ab8-4130-8e42-fdfe417ca41c
+		summarizeBy: none
+		sourceLineageTag: Container
+
+	column 'Customer ID'
+		dataType: int64
+		lineageTag: 9e4d8ef4-a901-43d3-bc0d-9e06c4ab8c63
+		summarizeBy: none
+		sourceLineageTag: Customer ID
+
+	column 'Customer Name'
+		dataType: string
+		lineageTag: 9d01c422-0a06-4a5c-810d-b81c8e74946f
+		summarizeBy: none
+		sourceLineageTag: Customer Name
+
+	column 'Customer Segment'
+		dataType: string
+		lineageTag: 6d35c616-dd64-42f2-b8a3-e837441dd44b
+		summarizeBy: none
+		sourceLineageTag: Customer Segment
+
+	column 'Department'
+		dataType: string
+		lineageTag: 057251ba-3f68-4d0c-b464-b3579d699f58
+		summarizeBy: none
+		sourceLineageTag: Department
+
+	column 'Discount'
+		dataType: double
+		lineageTag: 853ef4e8-24b3-41d7-8dfc-a5747ba747e3
+		summarizeBy: none
+		sourceLineageTag: Discount
+
+	column 'Item ID'
+		dataType: int64
+		lineageTag: cb65621c-2417-4ada-91d5-be2debe37370
+		summarizeBy: none
+		sourceLineageTag: Item ID
+
+	column 'Item'
+		dataType: string
+		lineageTag: 69ea1484-362a-4c1e-b04d-94aedac3097e
+		summarizeBy: none
+		sourceLineageTag: Item
+
+	column 'Number of Records'
+		dataType: int64
+		lineageTag: 634994b2-bb61-451c-a045-02376c24b75c
+		summarizeBy: none
+		sourceLineageTag: Number of Records
+
+	column 'Order Date'
+		dataType: dateTime
+		lineageTag: c89c97dc-acbd-4eed-a045-650ad9d61f28
+		summarizeBy: none
+		sourceLineageTag: Order Date
+
+	column 'Order ID'
+		dataType: int64
+		lineageTag: b28801fa-f3bb-4e96-ba86-cd3a52ed9546
+		summarizeBy: none
+		sourceLineageTag: Order ID
+
+	column 'Order Priority'
+		dataType: string
+		lineageTag: 43d8003d-bfe2-46e2-a9c4-4cb2b0db454c
+		summarizeBy: none
+		sourceLineageTag: Order Priority
+
+	column 'Order Quantity'
+		dataType: int64
+		lineageTag: 7c8c0311-65fb-475d-857c-16db91e3b698
+		summarizeBy: none
+		sourceLineageTag: Order Quantity
+
+	column 'Postal Code'
+		dataType: int64
+		lineageTag: b240568e-1ed8-454b-8ba8-cee18f571255
+		summarizeBy: none
+		sourceLineageTag: Postal Code
+
+	column 'Product Base Margin'
+		dataType: double
+		lineageTag: a3fc8068-aa4d-4069-a277-d3136005ecf5
+		summarizeBy: none
+		sourceLineageTag: Product Base Margin
+
+	column 'Profit'
+		dataType: int64
+		lineageTag: b90028a7-3a60-4e8f-809c-079e2062d827
+		summarizeBy: none
+		sourceLineageTag: Profit
+
+	column 'Region'
+		dataType: string
+		lineageTag: c8c252bd-02d7-4eb3-9156-31f37ac86bde
+		summarizeBy: none
+		sourceLineageTag: Region
+
+	column 'Row ID'
+		dataType: int64
+		lineageTag: 51d556dc-7e64-4f9d-9872-89c09e7d94d9
+		summarizeBy: none
+		sourceLineageTag: Row ID
+
+	column 'Sales'
+		dataType: int64
+		lineageTag: 98ac6fac-9af0-4270-9030-4d33ffd34072
+		summarizeBy: none
+		sourceLineageTag: Sales
+
+	column 'Ship Date'
+		dataType: dateTime
+		lineageTag: b2381b38-b299-468d-985d-2c9cae01c2cb
+		summarizeBy: none
+		sourceLineageTag: Ship Date
+
+	column 'Ship Mode'
+		dataType: string
+		lineageTag: 14bf26b0-9797-46c0-a1f4-502fd3862107
+		summarizeBy: none
+		sourceLineageTag: Ship Mode
+
+	column 'Shipping Cost'
+		dataType: int64
+		lineageTag: ed520c0c-6f47-465e-99cb-d51d10b8c087
+		summarizeBy: none
+		sourceLineageTag: Shipping Cost
+
+	column 'State'
+		dataType: string
+		lineageTag: 976ab0fd-8f0e-4945-b386-44f27625408c
+		summarizeBy: none
+		sourceLineageTag: State
+
+	column 'Unit Price'
+		dataType: int64
+		lineageTag: fab66e87-be85-472b-a3ca-33bc495ba4cf
+		summarizeBy: none
+		sourceLineageTag: Unit Price
+
+	partition Superstore-partition = m
+		mode: import
+		source =
+			```
+			Superstore
+			```

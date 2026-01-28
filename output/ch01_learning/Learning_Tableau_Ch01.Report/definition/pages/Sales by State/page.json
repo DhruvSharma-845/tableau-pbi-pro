@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "ad3fcafe-7a0f-41a7-88bf-c4359757d9f6",
+  "displayName": "Sales by State",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720
+}

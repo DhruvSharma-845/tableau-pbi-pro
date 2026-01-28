@@ -1,0 +1,12 @@
+expression Expressions
+
+	expression 'Superstore' =
+		```
+		let
+			Source = #table(
+				type table [Column1 = text],
+				{}
+			)
+		in
+			Source
+		```

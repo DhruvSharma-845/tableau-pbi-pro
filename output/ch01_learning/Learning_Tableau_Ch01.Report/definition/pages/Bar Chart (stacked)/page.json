@@ -1,0 +1,8 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/1.0.0/schema.json",
+  "name": "b3ccb174-01e2-4180-8fd6-69bb8e7c65bf",
+  "displayName": "Bar Chart (stacked)",
+  "displayOption": "FitToPage",
+  "width": 1280,
+  "height": 720
+}

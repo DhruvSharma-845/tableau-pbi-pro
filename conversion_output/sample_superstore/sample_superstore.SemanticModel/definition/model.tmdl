@@ -1,0 +1,8 @@
+model Model
+	compatibilityLevel: 1550
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	displayOptions: [
+		category: base
+	]

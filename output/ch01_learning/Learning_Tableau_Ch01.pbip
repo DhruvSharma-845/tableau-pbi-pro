@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "artifacts": [
+    {
+      "report": {
+        "path": "Learning_Tableau_Ch01.Report"
+      }
+    },
+    {
+      "semanticModel": {
+        "path": "Learning_Tableau_Ch01.SemanticModel"
+      }
+    }
+  ],
+  "settings": {
+    "enableAutoRecovery": true
+  }
+}
